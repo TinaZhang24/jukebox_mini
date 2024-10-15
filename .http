@@ -1,0 +1,16 @@
+@host = http://localhost:3000
+
+### Get all users
+GET {{host}}/users
+
+### Get single user with playlists included
+GET {{host}}/users/2
+
+### Make new playlist to user
+POST {{host}}/users/2/playlists
+Content-Type: application/json
+
+{
+  "name": "Foo",
+  "description": "Bar"
+}
